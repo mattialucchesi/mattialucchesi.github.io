@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Save the Date</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #eae8e2;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #000;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Fade animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .delay1 { animation-delay: 0.3s; }
+    .delay2 { animation-delay: 0.6s; }
+    .delay3 { animation-delay: 0.9s; }
+    .delay4 { animation-delay: 1.2s; }
+    .delay5 { animation-delay: 1.5s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .date {
+      font-size: 80px;
+      line-height: 1.2;
+    }
+
+    .dot {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .names {
+      margin-top: 60px;
+      font-size: 40px;
+      font-style: italic;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      margin-top: 10px;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    form {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 260px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 1.8s;
+    }
+
+    input, select {
+      padding: 12px;
+      border: 1px solid black;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      background: black;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Date -->
+  <div class="date fade delay1">26</div>
+  <div class="dot fade delay2">•</div>
+  <div class="date fade delay2">09</div>
+  <div class="dot fade delay3">•</div>
+  <div class="date fade delay3">26</div>
+
+  <!-- Names -->
+  <div class="names fade delay4">Liane + Philippe</div>
+  <div class="subtitle fade delay5">SAVE THE DATE</div>
+
+  <!-- RSVP FORM -->
+  <form action="https://formspree.io/f/yourID" method="POST">
+    <input type="text" name="firstName" placeholder="First Name" required>
+    <input type="text" name="lastName" placeholder="Last Name" required>
+    <input type="text" name="contact" placeholder="Email or Phone" required>
+
+    <select name="attendance" required>
+      <option value="">Will you be there?</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <button type="submit">Confirm</button>
+  </form>
+
+</div>
+
+</body>
+</html>
