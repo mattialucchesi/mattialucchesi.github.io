@@ -3,111 +3,56 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ✅ Mobile fix -->
+  <!-- ✅ IMPORTANT: mobile scaling fix -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Book Your Spot</title>
+  <title>Save the Date</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    /* Your original base styling stays untouched */
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
     }
 
+    /* Keep your layout as-is (example container if you have one) */
     .container {
-      width: 92%;
-      max-width: 600px;
-      margin: 25px auto;
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      width: 600px; /* desktop stays the same */
+      margin: 50px auto;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
-
-    p {
-      text-align: center;
+    input, textarea, button {
       font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    label {
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 6px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      outline: none;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #000;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 14px;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      background: black;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #333;
-    }
-
-    /* Mobile tweaks */
+    /* ✅ ONLY MOBILE FIX — does NOT change desktop design */
     @media (max-width: 600px) {
       .container {
-        margin: 15px auto;
-        padding: 18px;
+        width: 92%;
+        margin: 20px auto;
       }
 
-      h1 {
-        font-size: 20px;
+      input, textarea, button {
+        width: 100%;
+        font-size: 16px; /* fixes iPhone zoom issue */
+        box-sizing: border-box;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
       }
     }
   </style>
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <h1>Book Your Reservation</h1>
-    <p>Please fill out the form below and we’ll get back to you.</p>
+    <h1>Save the Date</h1>
 
     <form action="https://formspree.io/f/mzdyvrbv" method="POST">
 
@@ -126,12 +71,12 @@
       <label>Preferred Time</label>
       <input type="time" name="time" required>
 
-      <label>Additional Notes</label>
+      <label>Message</label>
       <textarea name="message"></textarea>
 
       <input type="hidden" name="_subject" value="New Reservation Request">
 
-      <button type="submit">Send Reservation</button>
+      <button type="submit">Send</button>
 
     </form>
 
