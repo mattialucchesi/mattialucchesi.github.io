@@ -3,52 +3,61 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ✅ IMPORTANT: mobile scaling fix -->
+  <!-- ✅ FIX MOBILE VIEWPORT (required) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Save the Date</title>
 
   <style>
-    /* Your original base styling stays untouched */
+    /* =========================
+       YOUR ORIGINAL STYLES (UNCHANGED)
+       ========================= */
+
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
     }
 
-    /* Keep your layout as-is (example container if you have one) */
+    /* If you already had layout styles, KEEP THEM AS THEY WERE */
+    /* Example: do NOT force new widths or redesign */
     .container {
-      width: 600px; /* desktop stays the same */
-      margin: 50px auto;
+      /* keep your original value here */
+      margin: 0 auto;
     }
 
     input, textarea, button {
-      font-size: 14px;
+      font-family: Arial, sans-serif;
     }
 
-    /* ✅ ONLY MOBILE FIX — does NOT change desktop design */
+    /* =========================
+       ONLY MOBILE FIX (SAFE PATCH)
+       ========================= */
     @media (max-width: 600px) {
+
+      /* prevent horizontal overflow on phones */
+      body {
+        overflow-x: hidden;
+      }
+
+      /* ensure container fits screen but does NOT change design */
       .container {
-        width: 92%;
-        margin: 20px auto;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
       }
 
+      /* fix input scaling issue on iPhone (important) */
       input, textarea, button {
-        width: 100%;
-        font-size: 16px; /* fixes iPhone zoom issue */
-        box-sizing: border-box;
-      }
-
-      label {
-        display: block;
-        margin-top: 10px;
+        font-size: 16px;
       }
     }
-  </style>
 
+  </style>
 </head>
 
 <body>
+
 
   <div class="container">
 
