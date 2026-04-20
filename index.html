@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Save the Date</title>
+  <title>Réservez la date</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,7 +29,7 @@
       box-sizing: border-box;
     }
 
-    /* Fade animation */
+    /* Animation */
     .fade {
       opacity: 0;
       transform: translateY(20px);
@@ -59,12 +59,11 @@
       margin: 10px 0;
     }
 
-    /* ⭐ SIGNATURE FONT CHANGE */
+    /* Signature style */
     .names {
       margin-top: 60px;
-      font-size: 42px;
+      font-size: 48px;
       font-family: 'Great Vibes', cursive;
-      font-style: normal;
     }
 
     .subtitle {
@@ -109,7 +108,6 @@
       transform: translateY(-2px);
     }
 
-    /* MOBILE */
     @media (max-width: 600px) {
       .date {
         font-size: 55px;
@@ -132,30 +130,33 @@
 
 <div class="container">
 
+  <!-- Date -->
   <div class="date fade delay1">26</div>
   <div class="dot fade delay2">•</div>
   <div class="date fade delay2">09</div>
   <div class="dot fade delay3">•</div>
   <div class="date fade delay3">26</div>
 
-  <!-- ⭐ SIGNATURE STYLE APPLIED HERE -->
+  <!-- Names -->
   <div class="names fade delay4">Liane + Philippe</div>
 
-  <div class="subtitle fade delay5">SAVE THE DATE</div>
+  <!-- Subtitle (French) -->
+  <div class="subtitle fade delay5">RÉSERVEZ LA DATE</div>
 
+  <!-- RSVP FORM -->
   <form action="https://formspree.io/f/mzdyvrbv" method="POST">
 
-    <input type="text" name="firstName" placeholder="First Name" required>
-    <input type="text" name="lastName" placeholder="Last Name" required>
-    <input type="text" name="contact" placeholder="Email or Phone" required>
+    <input type="text" name="prenom" placeholder="Prénom" required>
+    <input type="text" name="nom" placeholder="Nom de famille" required>
+    <input type="text" name="contact" placeholder="Email ou téléphone" required>
 
-    <select name="attendance" required>
-      <option value="">Will you be there?</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
+    <select name="presence" required>
+      <option value="">Serez-vous présent(e) ?</option>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
     </select>
 
-    <button type="submit">Confirm</button>
+    <button type="submit">Confirmer</button>
 
   </form>
 
