@@ -5,7 +5,7 @@
   <title>Save the Date</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&family=Allura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -25,6 +25,7 @@
       height: 100vh;
     }
 
+    /* Fade animation */
     .fade {
       opacity: 0;
       transform: translateY(20px);
@@ -54,11 +55,10 @@
       margin: 10px 0;
     }
 
-    /* ✨ UPDATED FONT HERE */
     .names {
       margin-top: 60px;
-      font-size: 48px;
-      font-family: 'Allura', cursive;
+      font-size: 40px;
+      font-style: italic;
     }
 
     .subtitle {
@@ -110,15 +110,18 @@
 
 <div class="container">
 
+  <!-- Date -->
   <div class="date fade delay1">26</div>
   <div class="dot fade delay2">•</div>
   <div class="date fade delay2">09</div>
   <div class="dot fade delay3">•</div>
   <div class="date fade delay3">26</div>
 
+  <!-- Names -->
   <div class="names fade delay4">Liane + Philippe</div>
   <div class="subtitle fade delay5">SAVE THE DATE</div>
 
+  <!-- RSVP FORM -->
   <form action="https://formspree.io/f/yourID" method="POST">
     <input type="text" name="firstName" placeholder="First Name" required>
     <input type="text" name="lastName" placeholder="Last Name" required>
