@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>Save the Date</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -23,6 +25,8 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      padding: 0 15px;
+      box-sizing: border-box;
     }
 
     /* Fade animation */
@@ -55,10 +59,12 @@
       margin: 10px 0;
     }
 
+    /* ⭐ SIGNATURE FONT CHANGE */
     .names {
       margin-top: 60px;
-      font-size: 40px;
-      font-style: italic;
+      font-size: 42px;
+      font-family: 'Great Vibes', cursive;
+      font-style: normal;
     }
 
     .subtitle {
@@ -84,7 +90,7 @@
       border: 1px solid black;
       background: transparent;
       font-family: 'Inter', sans-serif;
-      font-size: 12px;
+      font-size: 16px;
     }
 
     button {
@@ -103,6 +109,22 @@
       transform: translateY(-2px);
     }
 
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .date {
+        font-size: 55px;
+      }
+
+      .names {
+        font-size: 32px;
+      }
+
+      form {
+        width: 90%;
+        max-width: 260px;
+      }
+    }
+
   </style>
 </head>
 
@@ -110,19 +132,19 @@
 
 <div class="container">
 
-  <!-- Date -->
   <div class="date fade delay1">26</div>
   <div class="dot fade delay2">•</div>
   <div class="date fade delay2">09</div>
   <div class="dot fade delay3">•</div>
   <div class="date fade delay3">26</div>
 
-  <!-- Names -->
+  <!-- ⭐ SIGNATURE STYLE APPLIED HERE -->
   <div class="names fade delay4">Liane + Philippe</div>
+
   <div class="subtitle fade delay5">SAVE THE DATE</div>
 
-  <!-- RSVP FORM -->
-  <form action="https://formspree.io/f/yourID" method="POST">
+  <form action="https://formspree.io/f/mzdyvrbv" method="POST">
+
     <input type="text" name="firstName" placeholder="First Name" required>
     <input type="text" name="lastName" placeholder="Last Name" required>
     <input type="text" name="contact" placeholder="Email or Phone" required>
@@ -134,6 +156,7 @@
     </select>
 
     <button type="submit">Confirm</button>
+
   </form>
 
 </div>
